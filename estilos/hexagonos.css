@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FBB03B;
+    min-height: 100vh;
+    cursor: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background: rgba(18, 17, 19, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    border-right: 2px solid;
+}
+
+.contenedor {
+    overflow: hidden;
+    height: 100vh;
+    animation: animar 4s linear infinite;
+    cursor: none;
+}
+
+.fila {
+    display: inline-flex;
+    margin-left: -50px;
+    margin-top: -32px;
+    overflow: hidden;
+}
+
+.fila:nth-child(even) {
+    margin-left: 0px;
+}
+
+.hexagono {
+    position: relative;
+    height: 110px;
+    width: 100px;
+    margin: 1px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 4s;
+    background: linear-gradient(90deg, rgba(18, 17, 19, 1) 50%, rgba(0, 0, 0, 1) 50%);
+}
+
+.hexagono::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hexagono:hover {
+    background: linear-gradient(90deg, #FBB03B 50%, #FBB03B 50%);
+    opacity: 0;
+    transition: 0s;
+}
+
+/*
+@keyframes animar {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{ 
+        filter: hue-rotate(360deg);
+    }
+}*/
+
+.imagen {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 410px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.05);
+    justify-items: center;
+    align-items: center;
+}
+
+.imagen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 410px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.descrip {
+    content: "";
+    position: absolute;
+    top: 80%;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin: auto;
+    background: rgba(0, 0, 0, 0);
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.tit{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.intro{
+    text-align: center;
+    font-size: 30px;
+}

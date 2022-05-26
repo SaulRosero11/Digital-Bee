@@ -1,0 +1,133 @@
+:root{
+    --dark-coler: #020401;
+    --light-color: #fff;
+    --dark-grey-color: #96959B;
+    --light-grey-color: #efefef; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Barra de navegacion*/
+.navbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    min-height: 50px;
+    background: rgba(0,0,0,1);
+    cursor: auto;
+    font-weight: bold;
+}
+
+.navbar:hover{
+    background: linear-gradient(to bottom, rgba(251, 176, 59, 0.3), rgba(251, 176, 59, 0.0));
+    transition: 1s;
+}
+
+/*Manejo del nombre de la empresa*/
+.navbar-brand{
+    color: var(--light-color);
+    font-size: 20px;
+}
+.navbar-brand:hover{
+    color: var(--dark-grey-color);
+}
+
+/*Manejo del menu de la barra de navegación*/
+.nav-link{
+    color: var(--light-color);
+}
+.nav-link:hover{
+    color: var(--dark-grey-color);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fbx{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+section{
+    background-position: right center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    padding: 0 15 px;
+}
+
+section.right{
+    background-position: left center;
+}
+
+.sec_container{
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 140px 0;
+    color: #fff;
+}
+
+.right .sec_container{
+    text-align: right;
+    color: var(--dark-coler);
+}
+
+h1{
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.sec_content{
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/*@media only screen and (min-whidth: 125px){
+    .fullscreen{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .fullscreen .main__content{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transition: transform 0.56s ease-out;
+        -o-transition: transform 0.56s ease-out;
+        transition: transform 0.56s ease-out;
+    }
+    .fullscreen section{
+        height: 100vh;
+        padding-top: 110px;
+    }
+    .fullscreen .sec_container.home{
+        padding-top: 140px;
+    }
+}*/
+
+.modal, .modal-content{
+    background-color: var(--dark-coler);
+}
+
+footer {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--dark-coler);
+}
+
